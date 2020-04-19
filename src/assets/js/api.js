@@ -15,3 +15,13 @@ export const getList = () => {
         }
     })
 }
+
+export const getData = () => {
+    return axios.get('/api').then(data => data.data)
+}
+
+export const getTimer = (callback) => {
+    setTimeout(() => {
+        callback()
+    }, 2000);
+}
